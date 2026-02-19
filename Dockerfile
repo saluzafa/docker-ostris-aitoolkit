@@ -1,4 +1,5 @@
 FROM pytorch/pytorch:latest
+ENV HF_HOME=/workspace/huggingface
 WORKDIR /workspace
 RUN <<-EOF
 apt-get update -y
