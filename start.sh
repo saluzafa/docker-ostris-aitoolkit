@@ -15,9 +15,10 @@ if [ ! -d "$INSTALL_DIR" ]; then
   pip3 install -r requirements.txt
   pip3 install --no-cache-dir torch==2.9.1 torchvision==0.24.1 torchaudio==2.9.1 --index-url https://download.pytorch.org/whl/cu130
   pip install -r requirements.txt
+  cd /workspace/ai-toolkit/ui
+  npm run build_and_start
 else
   echo "AI-Toolkit already exists. Skipping clone and install."
+  cd /workspace/ai-toolkit/ui
+  npm run start
 fi
-
-cd /workspace/ai-toolkit/ui
-npm run build_and_start
